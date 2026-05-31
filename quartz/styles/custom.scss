@@ -71,3 +71,12 @@ audio { width: 100%; margin: 1rem 0; }
 // 图片放大提示（点击在新标签看原图的 affordance）
 article img { cursor: zoom-in; border-radius: 8px; transition: transform 0.15s; }
 article img:hover { transform: scale(1.01); }
+
+// 学术笔记模块（自定义 callout，图标复用 Quartz 内置）
+.callout[data-callout="definition"]  { --color: #4f46e5; --border: #4f46e544; --bg: #4f46e510; --callout-icon: var(--callout-icon-info); }
+.callout[data-callout="theorem"]     { --color: #2563eb; --border: #2563eb44; --bg: #2563eb10; --callout-icon: var(--callout-icon-abstract); }
+.callout[data-callout="lemma"]       { --color: #7c3aed; --border: #7c3aed44; --bg: #7c3aed10; --callout-icon: var(--callout-icon-abstract); }
+.callout[data-callout="corollary"]   { --color: #0891b2; --border: #0891b244; --bg: #0891b210; --callout-icon: var(--callout-icon-abstract); }
+.callout[data-callout="proposition"] { --color: #0d9488; --border: #0d948844; --bg: #0d948810; --callout-icon: var(--callout-icon-abstract); }
+.callout[data-callout="proof"]       { --color: #64748b; --border: #64748b44; --bg: #64748b10; --callout-icon: var(--callout-icon-quote); }
+.callout[data-callout="remark"]      { --color: #d97706; --border: #d9770644; --bg: #d9770610; --callout-icon: var(--callout-icon-tip); }
