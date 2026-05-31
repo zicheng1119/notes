@@ -12,3 +12,5 @@
 
 - DP(Data parallelism)
 - TP(Tensor parallelism)
+
+<iframe src="src/Scaling_CS25.pdf" width="100%" height="700px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
