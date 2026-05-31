@@ -97,6 +97,10 @@ article { counter-reset: thm eqn; }
   color: var(--gray);
   font-size: 0.9em;
 }
+
+// 点击公式复制 LaTeX 源码
+.katex { cursor: pointer; }
+.tex-copied { outline: 2px solid var(--secondary); outline-offset: 3px; border-radius: 3px; }
 .callout[data-callout="theorem"],
 .callout[data-callout="lemma"],
 .callout[data-callout="corollary"],
