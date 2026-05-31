@@ -1,3 +1,34 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// 标题：Grotesk 收紧字距
+h1, h2, h3 { letter-spacing: -0.02em; }
+
+// 正文：加大行高与可读宽度
+article p, article li { line-height: 1.7; }
+article { max-width: 750px; }
+
+// h1 下发丝分隔线（取代粗边框）
+article > h1:first-of-type {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--lightgray);
+  margin-bottom: 1.2rem;
+}
+
+// eyebrow 小标签工具类（笔记里可选用 <span class="eyebrow">…</span>）
+.eyebrow {
+display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 0.4rem;
+}
+
+// 行内 code 用靛蓝点缀
+code:not([data-language]) {
+  background: var(--highlight);
+  color: var(--secondary);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
