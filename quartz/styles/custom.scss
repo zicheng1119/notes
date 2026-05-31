@@ -50,3 +50,24 @@ code:not([data-language]) {
 
 // 音频播放器
 audio { width: 100%; margin: 1rem 0; }
+
+// 顶部阅读进度条：纯 CSS scroll-driven，零 JS 零额外 DOM
+@supports (animation-timeline: scroll()) {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    width: 100%;
+    transform-origin: 0 50%;
+    background: var(--secondary);
+    z-index: 100;
+    animation: progress linear;
+    animation-timeline: scroll(root);
+  }
+  @keyframes progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
+
+// 图片放大提示（点击在新标签看原图的 affordance）
+article img { cursor: zoom-in; border-radius: 8px; transition: transform 0.15s; }
+article img:hover { transform: scale(1.01); }
