@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Zicheng's Notes
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -21,24 +21,24 @@ configuration:
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
+        light: "#fbfbfa"
+        lightgray: "#e7e7ea"
+        gray: "#9a9aa3"
+        darkgray: "#33333a"
+        dark: "#1a1a1f"
+        secondary: "#4f46e5"
+        tertiary: "#8b85ff"
+        highlight: rgba(79, 70, 229, 0.08)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
+        light: "#131316"
+        lightgray: "#2a2a33"
+        gray: "#6a6a76"
+        darkgray: "#c2c2cc"
+        dark: "#e8e8ec"
+        secondary: "#8b85ff"
+        tertiary: "#4f46e5"
+        highlight: rgba(139, 133, 255, 0.12)
         textHighlight: "#b3aa0288"
 plugins:
   - source: github:quartz-community/created-modified-date
@@ -69,7 +69,7 @@ plugins:
       parseTags: true
       parseArrows: true
       parseBlockReferences: true
-      enableInHtmlEmbed: false
+      enableInHtmlEmbed: true
       enableYouTubeEmbed: true
       enableVideoEmbed: true
       enableCheckbox: true
