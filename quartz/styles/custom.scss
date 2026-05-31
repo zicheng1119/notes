@@ -84,7 +84,19 @@ article img:hover { transform: scale(1.01); }
 .callout[data-callout="exercise"]    { --color: #be185d; --border: #be185d44; --bg: #be185d10; --callout-icon: var(--callout-icon-question); }
 
 // 定理族自动编号（每页从 1 开始，theorem/lemma/corollary/proposition 共用一个计数器）
-article { counter-reset: thm; }
+article { counter-reset: thm eqn; }
+
+// 独立公式 $$...$$ 自动编号（每页从 1 开始，右侧显示 (N)）
+.katex-display { counter-increment: eqn; position: relative; }
+.katex-display::after {
+  content: "(" counter(eqn) ")";
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+  font-size: 0.9em;
+}
 .callout[data-callout="theorem"],
 .callout[data-callout="lemma"],
 .callout[data-callout="corollary"],
